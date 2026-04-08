@@ -670,6 +670,59 @@
       right: 14%;
     }
 
+    .logo-strip {
+      padding: 0.5rem 0 2.2rem;
+    }
+
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.9rem;
+      align-items: stretch;
+    }
+
+    .logo-card {
+      min-height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      border-radius: 22px;
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .logo-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(125,211,252,0.35);
+      background: #ffffff;
+    }
+
+    .logo-card img {
+      max-width: 100%;
+      max-height: 54px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: none;
+    }
+
+    .logo-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(125,211,252,0.28);
+      background: rgba(255,255,255,0.07);
+    }
+
+    .logo-card img {
+      max-width: 100%;
+      max-height: 54px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: brightness(1.02);
+    }
+
     footer {
       text-align: center;
       color: var(--muted);
@@ -708,6 +761,10 @@
       .mini-stats {
         grid-template-columns: 1fr 1fr;
       }
+
+      .logo-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     @media (max-width: 720px) {
@@ -744,6 +801,10 @@
       .bar-row {
         grid-template-columns: 1fr;
         gap: 0.4rem;
+      }
+
+      .logo-grid {
+        grid-template-columns: 1fr 1fr;
       }
     }
 
@@ -885,23 +946,8 @@
       </div>
 
       <div class="impact-side fade-up delay-b">
-        <div class="card feature-card">
-          <h3>Patents</h3>
-          <p>
-            Research outputs include patented innovation, reflecting a strong emphasis on translating science into real-world biomedical technologies.
-          </p>
-        </div>
-        <div class="card feature-card">
-          <h3>Commercialization</h3>
-          <p>
-            My work extends beyond publication into translational development, commercialization strategy, and research programs designed for practical clinical and industrial impact.
-          </p>
-        </div>
-        <div class="card feature-card">
-          <h3>Cross-disciplinary Reach</h3>
-          <p>
-            The research portfolio bridges AI, nanotechnology, diagnostics, therapeutics, and biomedical engineering to create broad, multidisciplinary relevance.
-          </p>
+        <div class="card feature-card" style="display:flex;align-items:center;justify-content:center;min-height:100%;">
+          <img src="https://pubs.rsc.org/en/Image/Get?imageInfo.ImageType=GA&imageInfo.ImageIdentifier.ManuscriptID=D0NA00952K&imageInfo.ImageIdentifier.Year=2021" alt="Graphical abstract" style="width:100%;height:100%;object-fit:contain;" />
         </div>
       </div>
     </div>
@@ -928,7 +974,7 @@
                 <div class="slide-kicker">Nanomaterials · 2024</div>
                 <h3>Redox-Modified Nanostructured Electrochemical Surfaces for Continuous Glucose Monitoring in Complex Biological Fluids</h3>
                 <p>A recent publication highlighting nanostructured electrochemical interfaces for continuous glucose monitoring in complex biological environments.</p>
-                <a class="slide-link" href="https://www.mdpi.com/2079-4991/14/9/796" target="_blank" rel="noopener noreferrer">Open publication</a>
+                <a class="slide-link" href="https://patents.google.com/patent/WO2024197225A1/fr" target="_blank" rel="noopener noreferrer">Open publication</a>
               </div>
             </article>
 
@@ -940,7 +986,7 @@
                 <div class="slide-kicker">Nanoscale Advances · 2021</div>
                 <h3>Nanomaterial-based encapsulation for controlled gastrointestinal delivery of viable probiotic bacteria</h3>
                 <p>A review focused on nanomaterial-enabled encapsulation strategies for improving gastrointestinal delivery and viability of probiotic bacteria.</p>
-                <a class="slide-link" href="https://www.researchgate.net/publication/350494135_Nanomaterial-based_encapsulation_for_controlled_gastrointestinal_delivery_of_viable_probiotic_bacteria" target="_blank" rel="noopener noreferrer">Open publication</a>
+                <a class="slide-link" href="https://pubs.rsc.org/en/content/articlelanding/2021/na/d0na00952k" target="_blank" rel="noopener noreferrer">Open publication</a>
               </div>
             </article>
 
@@ -990,6 +1036,28 @@
         <div class="contact-email"><a href="mailto:s.janfaza@alumni.ubc.ca">s.janfaza@alumni.ubc.ca</a></div>
       </div>
       <div class="contact-accent fade-up delay-b" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section class="logo-strip">
+    <div class="container">
+      <div class="logo-grid fade-up delay-c">
+        <a class="logo-card" href="https://www.harvard.edu/" target="_blank" rel="noopener noreferrer" aria-label="Harvard University">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Harvard_University_logo.svg/1280px-Harvard_University_logo.svg.png" alt="Harvard University logo" />
+        </a>
+        <a class="logo-card" href="https://www.ualberta.ca/" target="_blank" rel="noopener noreferrer" aria-label="University of Alberta">
+          <img src="https://www.ualberta.ca/en/toolkit/media-library/homepage-assets/ua_logo_green_rgb.png" alt="University of Alberta logo" />
+        </a>
+        <a class="logo-card" href="https://www.ubc.ca/" target="_blank" rel="noopener noreferrer" aria-label="University of British Columbia">
+          <img src="https://brand3.sites.olt.ubc.ca/files/2018/09/5NarrowLogo_ex_768.png" alt="UBC logo" />
+        </a>
+        <a class="logo-card" href="https://www.bccancer.bc.ca/" target="_blank" rel="noopener noreferrer" aria-label="BC Cancer">
+          <img src="https://cc-arcc.ca/wp-content/uploads/2024/06/BC-cancer-logo.jpg" alt="BC Cancer logo" />
+        </a>
+        <a class="logo-card" href="https://about.google/" target="_blank" rel="noopener noreferrer" aria-label="Google">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1280px-Google_2015_logo.svg.png" alt="Google logo" />
+        </a>
+      </div>
     </div>
   </section>
 
