@@ -462,12 +462,19 @@
       min-height: 400px;
       background: rgba(255,255,255,0.04);
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .slide-media img {
+    .slide-media img,
+    .cover-svg {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      object-position: center center;
+      display: block;
+      background: rgba(255,255,255,0.02);
     }
 
     .slide-media.preview-card {
@@ -914,9 +921,8 @@
         <div class="carousel-window" id="pubCarousel">
           <div class="carousel-track" id="carouselTrack">
             <article class="slide">
-              <div class="slide-media preview-card">
-                <div class="preview-badge">Journal Article</div>
-                <div class="preview-title">Continuous Glucose Monitoring Surfaces</div>
+              <div class="slide-media">
+                <img src="https://www.mdpi.com/files/uploaded/covers/nanomaterials/big_cover-nanomaterials-v14-i9.png" alt="Nanomaterials journal cover" />
               </div>
               <div class="slide-copy">
                 <div class="slide-kicker">Nanomaterials · 2024</div>
@@ -927,9 +933,8 @@
             </article>
 
             <article class="slide">
-              <div class="slide-media preview-card">
-                <div class="preview-badge">Review Article</div>
-                <div class="preview-title">Probiotic Delivery with Nanomaterial Encapsulation</div>
+              <div class="slide-media">
+                <img src="https://pubs.rsc.org/en/Image/Get?imageInfo.ImageType=GA&imageInfo.ImageIdentifier.ManuscriptID=D1NA90049H&imageInfo.ImageIdentifier.Year=2021" alt="Graphical abstract for probiotic delivery publication" />
               </div>
               <div class="slide-copy">
                 <div class="slide-kicker">Nanoscale Advances · 2021</div>
@@ -940,9 +945,8 @@
             </article>
 
             <article class="slide">
-              <div class="slide-media preview-card">
-                <div class="preview-badge">Springer Book</div>
-                <div class="preview-title">AI-Powered Dermatology</div>
+              <div class="slide-media">
+                <img src="https://media.springernature.com/full/springer-static/cover-hires/book/978-3-032-17974-6?as=webp" alt="AI-Powered Dermatology book cover" />
               </div>
               <div class="slide-copy">
                 <div class="slide-kicker">Springer Book · 2025</div>
@@ -953,9 +957,8 @@
             </article>
 
             <article class="slide">
-              <div class="slide-media preview-card">
-                <div class="preview-badge">Springer Book</div>
-                <div class="preview-title">Nanotechnology Applied To Pharmaceutical Technology</div>
+              <div class="slide-media">
+                <img src="https://m.media-amazon.com/images/I/61vVRbZWiKL._SL1246_.jpg" alt="Nanotechnology Applied to Pharmaceutical Technology book cover" />
               </div>
               <div class="slide-copy">
                 <div class="slide-kicker">Springer Book · 2017</div>
