@@ -385,21 +385,6 @@
       gap: 1rem;
     }
 
-    .feature-card {
-      padding: 1.4rem;
-    }
-
-    .feature-card h3 {
-      margin: 0 0 0.5rem;
-      font-size: 1.1rem;
-      letter-spacing: -0.03em;
-    }
-
-    .feature-card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
     .publications-section {
       padding-top: 1.3rem;
     }
@@ -475,49 +460,6 @@
       object-position: center center;
       display: block;
       background: rgba(255,255,255,0.02);
-    }
-
-    .slide-media.preview-card {
-      display: flex;
-      align-items: end;
-      padding: 1.2rem;
-      background:
-        radial-gradient(circle at top left, rgba(125,211,252,0.28), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(167,139,250,0.24), transparent 26%),
-        linear-gradient(135deg, rgba(15,23,42,0.82), rgba(30,41,59,0.96));
-    }
-
-    .slide-media.preview-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
-      pointer-events: none;
-    }
-
-    .preview-badge {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      z-index: 1;
-      padding: 0.45rem 0.7rem;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .preview-title {
-      position: relative;
-      z-index: 1;
-      font-size: clamp(1.5rem, 2.6vw, 2.3rem);
-      line-height: 1.02;
-      letter-spacing: -0.04em;
-      max-width: 12ch;
-      text-wrap: balance;
     }
 
     .slide-copy {
@@ -670,6 +612,195 @@
       right: 14%;
     }
 
+    .affiliation-heading {
+      margin: 0 0 0.9rem;
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      letter-spacing: -0.03em;
+      color: var(--text);
+      text-align: center;
+    }
+
+    .liposome-embed {
+      position: relative;
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(125,211,252,0.12), transparent 26%),
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+    }
+
+    .liposome-embed .membrane-visual {
+      position: relative;
+      height: 460px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .liposome-embed .particles-container {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .liposome-embed .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(125, 211, 252, 0.65);
+      animation: particle-float 10s infinite linear;
+    }
+
+    .liposome-embed .particle:nth-child(1) { width: 8px; height: 8px; top: 20%; left: 10%; animation-delay: 0s; }
+    .liposome-embed .particle:nth-child(2) { width: 12px; height: 12px; top: 60%; left: 5%; animation-delay: 1s; }
+    .liposome-embed .particle:nth-child(3) { width: 6px; height: 6px; top: 40%; left: 15%; animation-delay: 2s; }
+    .liposome-embed .particle:nth-child(4) { width: 10px; height: 10px; top: 80%; left: 20%; animation-delay: 3s; }
+    .liposome-embed .particle:nth-child(5) { width: 8px; height: 8px; top: 30%; right: 10%; animation-delay: 4s; }
+    .liposome-embed .particle:nth-child(6) { width: 14px; height: 14px; top: 70%; right: 5%; animation-delay: 5s; }
+
+    .liposome-embed .liposome {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid rgba(125, 211, 252, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: liposome-rotate 20s infinite linear;
+      z-index: 1;
+    }
+
+    .liposome-embed .liposome-inner {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid rgba(125, 211, 252, 0.28);
+      position: relative;
+    }
+
+    .liposome-embed .liposome-particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: rgba(125, 211, 252, 0.78);
+      border-radius: 50%;
+      animation: liposome-particle-float 5s infinite ease-in-out;
+    }
+
+    .liposome-embed .liposome-particle:nth-child(1) { top: 10px; left: 10px; animation-delay: 0s; }
+    .liposome-embed .liposome-particle:nth-child(2) { top: 10px; right: 10px; animation-delay: 1s; }
+    .liposome-embed .liposome-particle:nth-child(3) { bottom: 10px; left: 10px; animation-delay: 2s; }
+    .liposome-embed .liposome-particle:nth-child(4) { bottom: 10px; right: 10px; animation-delay: 3s; }
+
+    .liposome-embed .liposome-1 { top: 10%; left: 10%; }
+    .liposome-embed .liposome-2 { bottom: 10%; right: 10%; animation-delay: -5s; }
+    .liposome-embed .liposome-3 { top: 50%; right: 20%; animation-delay: -10s; }
+
+    .liposome-embed .membrane-container {
+      position: relative;
+      width: 360px;
+      height: 360px;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .liposome-embed .bilayer-membrane {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .liposome-embed .pattern-container {
+      position: relative;
+      width: 360px;
+      height: 360px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: scale(0.84);
+      flex-shrink: 0;
+      animation: slowRotate 40s linear infinite;
+    }
+
+    .liposome-embed .phospholipid {
+      position: absolute;
+      --num-units: 1;
+      --unit-index: 0;
+      --head-radius: 220px;
+      width: 22px;
+      transform: rotate(calc(360deg / var(--num-units) * var(--unit-index))) translateY(calc(-1 * var(--head-radius)));
+      transform-origin: center center;
+    }
+
+    .liposome-embed .head {
+      width: 18px;
+      height: 18px;
+      background-color: #7dd3fc;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 2px;
+      z-index: 2;
+    }
+
+    .liposome-embed .tails-container {
+      position: absolute;
+      top: 18px;
+      width: 22px;
+      height: 36px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .liposome-embed .tail {
+      width: 4px;
+      height: 36px;
+      background-color: #7dd3fc;
+    }
+
+    .liposome-embed .ring-1 .phospholipid { --head-radius: 220px; --num-units: 48; }
+    .liposome-embed .ring-2 .phospholipid {
+      --head-radius: 120px;
+      --num-units: 40;
+      transform: rotate(calc(360deg / var(--num-units) * var(--unit-index) + 180deg)) translateY(calc(-1 * var(--head-radius)));
+    }
+
+    .liposome-embed .ring-2 .phospholipid .tails-container { top: -36px; }
+
+    .liposome-embed .membrane-center {
+      position: absolute;
+      width: 92px;
+      height: 92px;
+      background: rgba(125, 211, 252, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      animation: pulse 4s infinite ease-in-out;
+    }
+
+    .liposome-embed .membrane-center-text {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #7dd3fc;
+      text-align: center;
+      line-height: 1.2;
+    }
+
     .logo-strip {
       padding: 0.5rem 0 2.2rem;
     }
@@ -690,7 +821,7 @@
       border-radius: 22px;
       background: #ffffff;
       border: 1px solid rgba(0,0,0,0.06);
-      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
     .logo-card:hover {
@@ -706,28 +837,6 @@
       height: auto;
       object-fit: contain;
       filter: none;
-    }
-
-    .logo-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(125,211,252,0.28);
-      background: rgba(255,255,255,0.07);
-    }
-
-    .logo-card img {
-      max-width: 100%;
-      max-height: 54px;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      filter: brightness(1.02);
-    }
-
-    footer {
-      text-align: center;
-      color: var(--muted);
-      padding: 2.2rem 0 2.6rem;
-      font-size: 0.95rem;
     }
 
     .fade-up {
@@ -747,6 +856,40 @@
     @keyframes fillBar {
       from { width: 0; }
       to { width: var(--target, 0%); }
+    }
+
+    @keyframes slowRotate {
+      from { transform: scale(0.84) rotate(0deg); }
+      to { transform: scale(0.84) rotate(360deg); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.1); opacity: 1; }
+    }
+
+    @keyframes particle-float {
+      0% { transform: translateY(0) translateX(0); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-100px) translateX(20px); opacity: 0; }
+    }
+
+    @keyframes liposome-rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes liposome-particle-float {
+      0%, 100% { transform: translate(0, 0); }
+      25% { transform: translate(5px, -5px); }
+      50% { transform: translate(-5px, 5px); }
+      75% { transform: translate(5px, 5px); }
     }
 
     @media (max-width: 1024px) {
@@ -779,7 +922,7 @@
 
       .hero { padding-top: 2.2rem; }
       .hero-copy { padding: 1.4rem; }
-      .panel, .impact-main, .feature-card, .contact-card, .pub-intro, .pub-carousel { padding: 1.2rem; }
+      .panel, .impact-main, .contact-card, .pub-intro, .pub-carousel, .liposome-embed { padding: 1.2rem; }
       .portrait-wrap { min-height: 320px; }
       .stat-grid,
       .mini-stats {
@@ -805,6 +948,16 @@
 
       .logo-grid {
         grid-template-columns: 1fr 1fr;
+      }
+
+      .liposome-embed .membrane-visual {
+        height: 360px;
+      }
+
+      .liposome-embed .membrane-container,
+      .liposome-embed .pattern-container {
+        width: 280px;
+        height: 280px;
       }
     }
 
@@ -946,8 +1099,103 @@
       </div>
 
       <div class="impact-side fade-up delay-b">
-        <div class="card feature-card" style="display:flex;align-items:center;justify-content:center;min-height:100%;">
-          <img src="https://pubs.rsc.org/en/Image/Get?imageInfo.ImageType=GA&imageInfo.ImageIdentifier.ManuscriptID=D0NA00952K&imageInfo.ImageIdentifier.Year=2021" alt="Graphical abstract" style="width:100%;height:100%;object-fit:contain;" />
+        <div class="card liposome-embed">
+          <div class="membrane-visual">
+            <div class="particles-container">
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+            </div>
+
+            <div class="liposome liposome-1">
+              <div class="liposome-inner">
+                <div class="liposome-particle"></div>
+                <div class="liposome-particle"></div>
+                <div class="liposome-particle"></div>
+                <div class="liposome-particle"></div>
+              </div>
+            </div>
+
+            <div class="liposome liposome-2">
+              <div class="liposome-inner">
+                <div class="liposome-particle"></div>
+                <div class="liposome-particle"></div>
+                <div class="liposome-particle"></div>
+                <div class="liposome-particle"></div>
+              </div>
+            </div>
+
+            <div class="liposome liposome-3">
+              <div class="liposome-inner">
+                <div class="liposome-particle"></div>
+                <div class="liposome-particle"></div>
+                <div class="liposome-particle"></div>
+                <div class="liposome-particle"></div>
+              </div>
+            </div>
+
+            <div class="membrane-container">
+              <div class="bilayer-membrane">
+                <div class="pattern-container">
+                  <div class="ring-1">
+                    <div class="phospholipid" style="--unit-index: 0;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 2;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 4;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 6;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 8;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 10;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 12;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 14;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 16;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 18;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 20;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 22;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 24;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 26;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 28;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 30;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 32;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 34;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 36;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 38;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 40;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 42;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 44;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 46;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                  </div>
+
+                  <div class="ring-2">
+                    <div class="phospholipid" style="--unit-index: 0;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 2;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 4;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 6;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 8;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 10;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 12;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 14;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 16;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 18;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 20;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 22;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 24;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 26;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 28;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 30;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 32;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 34;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 36;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                    <div class="phospholipid" style="--unit-index: 38;"><div class="head"></div><div class="tails-container"><div class="tail"></div><div class="tail"></div></div></div>
+                  </div>
+                </div>
+                <div class="membrane-center">
+                  <div class="membrane-center-text"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -956,8 +1204,8 @@
   <section id="publications" class="publications-section">
     <div class="container pub-shell">
       <div class="card pub-intro fade-up delay-a">
-        <div class="eyebrow">Publication Highlights</div>
-        <h2 class="section-title">Selected publications and books</h2>
+        <h3 class="affiliation-heading">Affiliated Institutions</h3>
+      </div>
         <p>
           A featured slider with selected journal and book highlights. You can move through the slides manually, and the carousel also advances automatically.
         </p>
@@ -1041,6 +1289,7 @@
 
   <section class="logo-strip">
     <div class="container">
+      <h3 class="affiliation-heading">Affiliated Institutions</h3>
       <div class="logo-grid fade-up delay-c">
         <a class="logo-card" href="https://www.harvard.edu/" target="_blank" rel="noopener noreferrer" aria-label="Harvard University">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Harvard_University_logo.svg/1280px-Harvard_University_logo.svg.png" alt="Harvard University logo" />
@@ -1060,10 +1309,6 @@
       </div>
     </div>
   </section>
-
-  <footer>
-    © 2026 Sajjad Janfaza
-  </footer>
 
   <script>
     const animateCount = (el) => {
