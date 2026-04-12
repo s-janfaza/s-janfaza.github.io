@@ -1,3 +1,34 @@
+
+
+
+
+
+Pasted text(4).txt
+Document
+apply the following in this code:
+
+1. background theme should change to white, and the rest colors should change accourdingly for good visibility and prefection
+
+2. the fist section should change as below:
+remove "AI · Nanotechnology · Translational Research
+Advancing biomedical innovation through AI and nanotechnology." 
+
+insted put my name " Sajjad Janfaza" and a longer summary about me (dont mention the company name and activity)
+
+3. kep the rest of the text the same
+
+
+
+Thought
+Here is the updated code with:
+
+a white background theme and adjusted colors for cleaner visibility
+
+the first section changed to Sajjad Janfaza with a longer personal summary
+
+the rest of the text kept the same as requested, based on your provided file 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,19 +36,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sajjad Janfaza · Personal Website</title>
   <style>
-    /* ===== SAME CORE STYLES (unchanged) ===== */
     :root {
-      --bg: #07111f;
-      --bg-2: #0d1b2f;
-      --panel: rgba(255,255,255,0.08);
-      --panel-strong: rgba(255,255,255,0.12);
-      --text: #edf4ff;
-      --muted: #adc0dc;
-      --line: rgba(255,255,255,0.12);
-      --accent: #7dd3fc;
-      --accent-2: #a78bfa;
-      --accent-3: #67e8f9;
-      --glow: 0 24px 60px rgba(0,0,0,0.35);
+      --bg: #ffffff;
+      --bg-2: #f7fafc;
+      --panel: rgba(255,255,255,0.92);
+      --panel-strong: rgba(255,255,255,0.98);
+      --text: #102033;
+      --muted: #5f7288;
+      --line: rgba(16,32,51,0.10);
+      --accent: #0b6ea8;
+      --accent-2: #6d5bd0;
+      --accent-3: #13b5c8;
+      --glow: 0 20px 50px rgba(15, 23, 42, 0.08);
       --radius: 26px;
       --max: 1220px;
     }
@@ -29,8 +59,8 @@
       font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(125,211,252,0.12), transparent 28%),
-        radial-gradient(circle at top right, rgba(167,139,250,0.14), transparent 24%),
+        radial-gradient(circle at top left, rgba(11,110,168,0.06), transparent 28%),
+        radial-gradient(circle at top right, rgba(109,91,208,0.07), transparent 24%),
         linear-gradient(180deg, var(--bg), var(--bg-2));
       line-height: 1.6;
       overflow-x: hidden;
@@ -49,7 +79,7 @@
       top: 0;
       z-index: 50;
       backdrop-filter: blur(14px);
-      background: rgba(7, 13, 25, 0.75);
+      background: rgba(255, 255, 255, 0.88);
       border-bottom: 1px solid var(--line);
     }
 
@@ -65,6 +95,7 @@
       font-weight: 800;
       letter-spacing: -0.02em;
       font-size: 1.05rem;
+      color: var(--text);
     }
 
     .brand span {
@@ -111,8 +142,8 @@
       flex-direction: column;
       justify-content: center;
       background:
-        linear-gradient(135deg, rgba(125,211,252,0.08), transparent 42%),
-        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+        linear-gradient(135deg, rgba(11,110,168,0.05), transparent 42%),
+        linear-gradient(180deg, rgba(255,255,255,0.95), rgba(247,250,252,0.92));
     }
 
     .eyebrow {
@@ -122,8 +153,8 @@
       gap: 0.5rem;
       padding: 0.4rem 0.75rem;
       border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(11,110,168,0.06);
+      border: 1px solid rgba(11,110,168,0.12);
       color: var(--accent);
       font-size: 0.8rem;
       letter-spacing: 0.12em;
@@ -137,6 +168,7 @@
       line-height: 0.98;
       letter-spacing: -0.05em;
       max-width: 11ch;
+      color: var(--text);
     }
 
     .accent-text {
@@ -169,12 +201,15 @@
       border: 1px solid var(--line);
       font-weight: 600;
       transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      color: var(--text);
+      background: #ffffff;
     }
 
     .btn:hover { transform: translateY(-2px); }
+
     .btn-primary {
-      background: linear-gradient(135deg, rgba(125,211,252,0.18), rgba(167,139,250,0.18));
-      border-color: rgba(125,211,252,0.32);
+      background: linear-gradient(135deg, rgba(11,110,168,0.12), rgba(109,91,208,0.10));
+      border-color: rgba(11,110,168,0.22);
     }
 
     .hero-media {
@@ -195,8 +230,8 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(180deg, rgba(7,17,31,0.02), rgba(7,17,31,0.16) 45%, rgba(7,17,31,0.78) 100%),
-        linear-gradient(90deg, rgba(7,17,31,0.18), transparent 38%, transparent 68%, rgba(7,17,31,0.18));
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02) 45%, rgba(16,32,51,0.18) 100%),
+        linear-gradient(90deg, rgba(255,255,255,0.08), transparent 38%, transparent 68%, rgba(255,255,255,0.08));
       pointer-events: none;
     }
 
@@ -213,15 +248,15 @@
       grid-template-columns: 1fr 1fr;
       gap: 0.9rem;
       padding: 1rem;
-      background: rgba(255,255,255,0.04);
+      background: rgba(247,250,252,0.96);
       border-top: 1px solid var(--line);
     }
 
     .stat-box {
       padding: 1rem;
       border-radius: 18px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: #ffffff;
+      border: 1px solid rgba(16,32,51,0.08);
     }
 
     .stat-label {
@@ -234,6 +269,7 @@
       font-size: clamp(1.5rem, 2vw, 2.1rem);
       font-weight: 800;
       letter-spacing: -0.04em;
+      color: var(--text);
     }
 
     section { padding: 1.15rem 0; }
@@ -242,6 +278,7 @@
       margin: 0 0 0.9rem;
       font-size: clamp(1.55rem, 3vw, 2.5rem);
       letter-spacing: -0.04em;
+      color: var(--text);
     }
 
     .muted { color: var(--muted); }
@@ -272,9 +309,9 @@
     .chip {
       padding: 0.65rem 0.9rem;
       border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: #dbeafe;
+      background: rgba(11,110,168,0.06);
+      border: 1px solid rgba(11,110,168,0.10);
+      color: var(--text);
       font-size: 0.94rem;
     }
 
@@ -287,8 +324,8 @@
     .edu-item {
       padding: 0.95rem 1rem;
       border-radius: 18px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: #ffffff;
+      border: 1px solid rgba(16,32,51,0.08);
       color: var(--muted);
     }
 
@@ -302,8 +339,8 @@
     .impact-main {
       padding: 1.75rem;
       background:
-        radial-gradient(circle at top right, rgba(125,211,252,0.12), transparent 35%),
-        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+        radial-gradient(circle at top right, rgba(11,110,168,0.07), transparent 35%),
+        linear-gradient(180deg, rgba(255,255,255,0.98), rgba(247,250,252,0.94));
     }
 
     .impact-summary {
@@ -323,8 +360,8 @@
     .mini-stat {
       padding: 1rem;
       border-radius: 18px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: #ffffff;
+      border: 1px solid rgba(16,32,51,0.08);
     }
 
     .mini-stat .k {
@@ -332,6 +369,7 @@
       font-weight: 800;
       letter-spacing: -0.04em;
       margin-bottom: 0.2rem;
+      color: var(--text);
     }
 
     .mini-stat .t {
@@ -361,9 +399,9 @@
       position: relative;
       height: 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.08);
+      background: rgba(16,32,51,0.08);
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.05);
+      border: 1px solid rgba(16,32,51,0.04);
     }
 
     .bar-fill {
@@ -372,7 +410,7 @@
       width: 0;
       border-radius: inherit;
       background: linear-gradient(90deg, var(--accent), var(--accent-2));
-      box-shadow: 0 0 24px rgba(125,211,252,0.22);
+      box-shadow: 0 0 20px rgba(11,110,168,0.12);
       animation: fillBar 1.8s ease forwards;
     }
 
@@ -390,10 +428,9 @@
       padding-top: 1.3rem;
     }
 
-    /* ✦ REVISED PUBLICATIONS GRID: left = institutions, right = compact carousel ✦ */
     .pub-shell {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;   /* left slightly larger for logos, right smaller */
+      grid-template-columns: 1.1fr 0.9fr;
       gap: 1.2rem;
       align-items: stretch;
     }
@@ -414,10 +451,9 @@
       color: var(--text);
     }
 
-    /* logo grid inside left column */
     .inst-logo-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);  /* two columns for logos, fits well */
+      grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
       align-items: stretch;
       margin-top: 0.5rem;
@@ -437,7 +473,7 @@
 
     .inst-logo-card:hover {
       transform: translateY(-3px);
-      border-color: rgba(125,211,252,0.35);
+      border-color: rgba(11,110,168,0.25);
     }
 
     .inst-logo-card img {
@@ -448,7 +484,6 @@
       object-fit: contain;
     }
 
-    /* carousel – made smaller */
     .pub-carousel {
       padding: 1.2rem;
     }
@@ -457,9 +492,9 @@
       position: relative;
       overflow: hidden;
       border-radius: 22px;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.04);
-      min-height: 380px;               /* reduced from 460px */
+      border: 1px solid rgba(16,32,51,0.08);
+      background: rgba(247,250,252,0.9);
+      min-height: 380px;
     }
 
     .carousel-track {
@@ -480,9 +515,9 @@
     .slide-media {
       border-radius: 20px;
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
-      min-height: 280px;               /* reduced from 400px */
-      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(16,32,51,0.08);
+      min-height: 280px;
+      background: rgba(255,255,255,0.95);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -518,6 +553,7 @@
       font-size: clamp(1.3rem, 2.5vw, 1.9rem);
       line-height: 1.2;
       letter-spacing: -0.04em;
+      color: var(--text);
     }
 
     .slide-copy p {
@@ -534,10 +570,11 @@
       width: fit-content;
       padding: 0.7rem 1rem;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.1);
-      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(16,32,51,0.10);
+      background: #ffffff;
       font-weight: 600;
       font-size: 0.9rem;
+      color: var(--text);
     }
 
     .carousel-controls {
@@ -557,8 +594,8 @@
       width: 46px;
       height: 46px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(16,32,51,0.12);
+      background: #ffffff;
       color: var(--text);
       cursor: pointer;
       font-size: 1rem;
@@ -575,7 +612,7 @@
       height: 10px;
       border-radius: 999px;
       border: none;
-      background: rgba(255,255,255,0.22);
+      background: rgba(16,32,51,0.20);
       cursor: pointer;
       padding: 0;
     }
@@ -598,8 +635,8 @@
       flex-direction: column;
       justify-content: center;
       background:
-        linear-gradient(135deg, rgba(125,211,252,0.12), rgba(167,139,250,0.12)),
-        rgba(255,255,255,0.04);
+        linear-gradient(135deg, rgba(11,110,168,0.08), rgba(109,91,208,0.08)),
+        rgba(255,255,255,0.95);
     }
 
     .contact-email {
@@ -618,10 +655,10 @@
     .contact-accent {
       min-height: 100%;
       background:
-        radial-gradient(circle at 25% 20%, rgba(125,211,252,0.45), transparent 22%),
-        radial-gradient(circle at 70% 60%, rgba(167,139,250,0.5), transparent 24%),
-        radial-gradient(circle at 40% 85%, rgba(103,232,249,0.22), transparent 16%),
-        rgba(255,255,255,0.04);
+        radial-gradient(circle at 25% 20%, rgba(11,110,168,0.22), transparent 22%),
+        radial-gradient(circle at 70% 60%, rgba(109,91,208,0.22), transparent 24%),
+        radial-gradient(circle at 40% 85%, rgba(19,181,200,0.12), transparent 16%),
+        rgba(255,255,255,0.92);
       border-radius: var(--radius);
       border: 1px solid var(--line);
       position: relative;
@@ -633,7 +670,7 @@
       content: "";
       position: absolute;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.12);
+      border: 1px solid rgba(16,32,51,0.08);
     }
 
     .contact-accent::before {
@@ -650,7 +687,6 @@
       right: 14%;
     }
 
-    /* liposome visual unchanged */
     .liposome-embed {
       position: relative;
       min-height: 100%;
@@ -660,8 +696,8 @@
       padding: 1rem;
       overflow: hidden;
       background:
-        radial-gradient(circle at 30% 20%, rgba(125,211,252,0.12), transparent 26%),
-        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+        radial-gradient(circle at 30% 20%, rgba(11,110,168,0.08), transparent 26%),
+        linear-gradient(180deg, rgba(255,255,255,0.98), rgba(247,250,252,0.92));
     }
 
     .liposome-embed .membrane-visual {
@@ -684,7 +720,7 @@
     .liposome-embed .particle {
       position: absolute;
       border-radius: 50%;
-      background: rgba(125, 211, 252, 0.65);
+      background: rgba(11, 110, 168, 0.42);
       animation: particle-float 10s infinite linear;
     }
 
@@ -700,7 +736,7 @@
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      border: 2px solid rgba(125, 211, 252, 0.45);
+      border: 2px solid rgba(11, 110, 168, 0.32);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -712,7 +748,7 @@
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      border: 1px solid rgba(125, 211, 252, 0.28);
+      border: 1px solid rgba(11, 110, 168, 0.22);
       position: relative;
     }
 
@@ -720,7 +756,7 @@
       position: absolute;
       width: 8px;
       height: 8px;
-      background: rgba(125, 211, 252, 0.78);
+      background: rgba(11, 110, 168, 0.62);
       border-radius: 50%;
       animation: liposome-particle-float 5s infinite ease-in-out;
     }
@@ -779,7 +815,7 @@
     .liposome-embed .head {
       width: 18px;
       height: 18px;
-      background-color: #7dd3fc;
+      background-color: #0b6ea8;
       border-radius: 50%;
       position: absolute;
       top: 0;
@@ -799,7 +835,7 @@
     .liposome-embed .tail {
       width: 4px;
       height: 36px;
-      background-color: #7dd3fc;
+      background-color: #0b6ea8;
     }
 
     .liposome-embed .ring-1 .phospholipid { --head-radius: 220px; --num-units: 48; }
@@ -815,7 +851,7 @@
       position: absolute;
       width: 92px;
       height: 92px;
-      background: rgba(125, 211, 252, 0.1);
+      background: rgba(11, 110, 168, 0.08);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -827,7 +863,7 @@
     .liposome-embed .membrane-center-text {
       font-size: 1.1rem;
       font-weight: 700;
-      color: #7dd3fc;
+      color: #0b6ea8;
       text-align: center;
       line-height: 1.2;
     }
@@ -885,7 +921,6 @@
       75% { transform: translate(5px, 5px); }
     }
 
-    /* Responsive adjustments */
     @media (max-width: 1024px) {
       .hero-grid,
       .about-grid,
@@ -974,9 +1009,8 @@
   <header class="hero">
     <div class="container hero-grid">
       <div class="card hero-copy fade-up">
-        <div class="eyebrow">AI · Nanotechnology · Translational Research</div>
-        <h1>Advancing <span class="accent-text">biomedical innovation</span> through AI and nanotechnology.</h1>
-        <p>I am Sajjad Janfaza, PhD, an interdisciplinary scientist specializing in translational biomedical research, with expertise in AI, nanotechnology, and therapeutic innovation.</p>
+        <h1>Sajjad <span class="accent-text">Janfaza</span></h1>
+        <p>I am Sajjad Janfaza, PhD, an interdisciplinary scientist and scholar whose work bridges advanced research, academic leadership, and innovation. My background combines deep training across the life sciences and nanobiotechnology with a strong focus on translating complex scientific ideas into meaningful real-world impact. I am particularly interested in building connections across disciplines, developing forward-looking research directions, and contributing to projects that sit at the intersection of science, technology, and human health.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#impact">Explore research impact</a>
           <a class="btn" href="#contact">Contact</a>
@@ -1036,7 +1070,6 @@
       </div>
       <div class="impact-side fade-up delay-b">
         <div class="card liposome-embed">
-          <!-- liposome visualization unchanged -->
           <div class="membrane-visual">
             <div class="particles-container">
               <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
@@ -1105,10 +1138,8 @@
     </div>
   </section>
 
-  <!-- ✦ REVISED PUBLICATIONS SECTION: Affiliated Institutions left, compact carousel right ✦ -->
   <section id="publications" class="publications-section">
     <div class="container pub-shell">
-      <!-- LEFT: Affiliated Institutions (moved from bottom) -->
       <div class="pub-institutions fade-up delay-a">
         <h2 class="affiliation-heading">Affiliated Institutions</h2>
         <div class="inst-logo-grid">
@@ -1131,7 +1162,6 @@
         <p style="margin-top: 1.5rem; color: var(--muted); font-size: 0.95rem;">Collaborations across leading academic and research centers.</p>
       </div>
 
-      <!-- RIGHT: Featured publications carousel (compact) -->
       <div class="card pub-carousel fade-up delay-b">
         <div class="carousel-window" id="pubCarousel">
           <div class="carousel-track" id="carouselTrack">
@@ -1196,8 +1226,6 @@
     </div>
   </section>
 
-  <!-- BOTTOM LOGO STRIP REMOVED – now integrated into publications section -->
-
   <script>
     (function() {
       const animateCount = (el) => {
@@ -1234,7 +1262,6 @@
 
       document.querySelectorAll('.hero-media, .impact-main').forEach((section) => observer.observe(section));
 
-      // Carousel logic
       const track = document.getElementById('carouselTrack');
       const slides = Array.from(document.querySelectorAll('.slide'));
       const dotsWrap = document.getElementById('carouselDots');
@@ -1293,3 +1320,10 @@
   </script>
 </body>
 </html>
+I can also make the new first summary sound more academic, more prestigious, or more personal.
+
+
+
+
+
+
